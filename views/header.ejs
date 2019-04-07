@@ -1,0 +1,74 @@
+<head>
+    <!--<link rel="stylesheet" href="/bb.css">-->
+    <style>
+        body {background-color: powderblue;}
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #888;
+        border: none;
+        border-radius: 8px;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: "Impact", Charcoal, sans-serif
+    }
+    li a:hover {
+        background-color: #555;
+    }
+    h1   {
+        padding-top: 20px;
+        color: plum;
+        font-size: 40px;
+        font-family: "Impact", Charcoal, sans-serif
+    }
+    p    {
+        color: plum;
+        font-size: 20px;
+        font-family: "Impact", Charcoal, sans-serif
+    }
+    .center {
+        text-align: center;
+    }
+    .right{
+        position: absolute;
+        right: 0px;
+    }
+    .padBottom{
+        padding-bottom: 4px;
+    }    
+    .button {
+        background-color: #888 ;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        padding: 20px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        font-family: "Impact", Charcoal, sans-serif
+    }
+    .button:hover {
+        background-color: #555;
+    }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/Profile">Profile</a></li>
+        <li style="float:right"><a href="/Login">Login</a></li>
+    </ul>
+    <%- include(partial) %>
+</body>
