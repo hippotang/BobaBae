@@ -12,9 +12,25 @@
     <div class="column"></div>
         <br>
         <h1 style="color:darkblue"> Available BobaBaes: </h1> 
-        <!-- dynamically create bobabaes with y/n buttons -->  
+            <form method="get" action="/editProfile">
+                <input type="hidden" name=username value=<%= uname %> >
+                <% for (var i = 0; i < potential_matches.length; i++) {%>
+                    <input type="checkbox" name="requested" value=<%= potential_matches[i] %> > <%= potential_matches[i] %> <br>
+                <% } %>
+                <br>
+                <input type=submit class=button value="request boba run">
+            </form>
         <h1 style="color:darkblue"> Confirmed BobaBaes: </h1> 
-        <!-- dynamically create bobabaes with y/n buttons -->  
+            <form method="get" action="/editProfile">
+                <input type="hidden" name=username value=<%= uname %> >
+                <% for (var i = 0; i < requested_matches.length; i++) {%>
+                    <input type="checkbox" name="requested" value=<%= requested_matches[i] %> > <%= requested_matches[i] %> <br>
+                <% } %>
+                <br>
+                <input type=submit class=button value="confirm boba run">
+            </form>  
+
+        <h1 style="color:darkblue"> Your availability for today: </h1>
     </div>
 </div>
 <div class="row">

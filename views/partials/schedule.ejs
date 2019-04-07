@@ -2,8 +2,8 @@
     <p style="color:black"> What time do you want to go out for boba today? </p>
     <br>
     <form method="get" action="/scheduleAdded">
-        <p>Earliest Time: <input name="earliestTime" type="time" value="09:00:00">
-        Latest Time: <input name="latestTime" type="time" value="12:00:00"> </p>
+        <p>Earliest Time: <input name="earliestTime" type="time" value="09:00:00" min="0:00" max="23:59">
+        Latest Time: <input name="latestTime" type="time" value="12:00:00" min="0:00" max="23:59"> </p>
         <br>
         <input type="hidden" name=username value=<%= uname %> />
         <input type=submit class=button value="add plan">  </button>
