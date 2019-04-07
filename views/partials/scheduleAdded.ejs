@@ -1,0 +1,8 @@
+<p style="color:black"> You have added <%= earliestTime %> to <%= latestTime %> to your plan </p>
+<p style="color:black"> Check your profile to see who wants to get boba with you! </p>
+
+<br>
+<form method="get" action="/profile">
+    <input type="hidden" name=username value=<%= uname %> />
+    <input type=submit class="button" value="go to profile" ></button>
+</form>

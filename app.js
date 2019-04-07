@@ -22,6 +22,8 @@ app.get('/createUser', createUser);
 app.get('/userCreated', userCreated);
 app.get('/login', login)
 app.get('/profile', profile)
+app.get('/schedule', scheduleBobaRun)
+app.get('/scheduleAdded', scheduleAdded)
 app.get('*', notFound)
 
 app.listen(3000, () => {console.log("server is running ...")});
@@ -49,11 +51,13 @@ function userCreated(req, res) {
     var city = req.query.city;
     var username = req.query.username;
     var name = req.query.name
+    var stores = req.query.stores;
 
     u = {};
     u["state"] = state;
     u["city"] = city;
     u["name"] = name;
+    u["fav"] = stores;
 
     if (users[state] == undefined) {
         users[state] = {};
@@ -80,6 +84,24 @@ function profile(req, res) {
     var u = getUserObject(username);
     console.log("stores: " + JSON.stringify(u.fav));
     res.render("header", {partial: "partials/profile", uname: username, name: u.name, city: u.city, state: u.state, stores: u.fav})
+}
+
+
+function scheduleBobaRun(req, res) {
+    var username = req.query.username;
+    var u = getUserObject(username);
+    res.render("header", {partial: "partials/schedule", uname: username})
+}
+
+function scheduleAdded(req, res) {
+    var username = req.query.username;
+    var u = getUserObject(username);
+    console.log('addschedule to ' + username);
+    if (!u.hasOwnProperty('plans')) {
+        u.plans = []
+    }
+    u['plans'].push([req.earliestTime, req.latestTime]);
+    res.render("header", {partial: "partials/scheduleAdded", uname: username, earliestTime: req.query.earliestTime, latestTime: req.query.latestTime});
 }
 
 function notFound(req, res) {
