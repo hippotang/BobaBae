@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hippotang/BobaBae/issues"
   },
-  "homepage": "https://github.com/hippotang/BobaBae#readme"
+  "homepage": "https://github.com/hippotang/BobaBae#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
