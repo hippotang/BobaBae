@@ -4,6 +4,8 @@ const ejs = require('ejs');
 const fs = require('fs');
 const serve = require('express-static');
 
+const port = process.env.PORT || 1337;
+
 var router = express.Router()
 var app = express();
 
@@ -28,7 +30,7 @@ app.get('/scheduleAdded', scheduleAdded)
 app.get('/about', about)
 app.get('*', notFound)
 
-app.listen(3000, () => {console.log("server is running ...")});
+app.listen(port, () => {console.log("server is running ...")});
 
 
 function home(req, res) {
