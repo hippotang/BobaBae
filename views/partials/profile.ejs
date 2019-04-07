@@ -1,0 +1,9 @@
+<h1> Hello <%= name %>! </h1>
+<img src = "https://images-na.ssl-images-amazon.com/images/I/8166xCVDGnL._SL1500_.jpg" width = 300>
+<br>
+<p style="color:black"> username: <%= uname %> </p>
+<p style="color:black"> city: <%= city %> </p>
+<p style="color:black"> state: <%= state %> </p>
+<p style="color:black"> favorite stores: </p>
+<% for (var i = 0; i < stores.length; i++) %>
+    <p> <% stores[i] %> </p>

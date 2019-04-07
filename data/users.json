@@ -1,5 +1,1 @@
-{
-    "a": {"id": 1},
-    "b": {"id": 2},
-    "c": {"id": 3}
-}
+{"CA":{"Pasadena":{"bob.chill":{"name":"Bob Ross","fav":["boba time"],"needsRide":true,"city":"Pasadena","state":"CA"},"coolcat93":{"name":"Pragathi Venkatesh","fav":["boba time"],"needsRide":true,"city":"Pasadena","state":"CA"}},"Yreka":{"mmmmm":{"state":"CA","city":"Yreka","name":"Melody J Griffith"}}}}
