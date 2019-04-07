@@ -2,9 +2,12 @@ const http = require('http');
 const express = require('express');
 const ejs = require('ejs');
 const fs = require('fs');
+const serve = require('express-static');
 
 var router = express.Router()
 var app = express();
+
+app.use( express.static( "." ) );
 
 // read json data
 var dataPath = 'data/users.json'
@@ -75,7 +78,7 @@ function login(req, res) {
 function profile(req, res) {
     var username = req.query.username;
     var u = getUserObject(username);
-    console.log("u: " + JSON.stringify(u));
+    console.log("stores: " + JSON.stringify(u.fav));
     res.render("header", {partial: "partials/profile", uname: username, name: u.name, city: u.city, state: u.state, stores: u.fav})
 }
 
