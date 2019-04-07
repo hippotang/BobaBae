@@ -1,0 +1,19 @@
+{
+  "name": "bobabae",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hippotang/BobaBae.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hippotang/BobaBae/issues"
+  },
+  "homepage": "https://github.com/hippotang/BobaBae#readme"
+}
